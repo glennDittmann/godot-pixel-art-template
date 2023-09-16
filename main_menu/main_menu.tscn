@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://ddn6fquwsqsvg"]
+
+[ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_hpfk0"]
+[ext_resource type="Texture2D" uid="uid://2pes6e0h8pwd" path="res://assets/menu_backgrounds/main-menu-default.png" id="2_xevso"]
+[ext_resource type="Texture2D" uid="uid://dsb0tvg4t7ptt" path="res://assets/menu_backgrounds/main-menu-game.png" id="3_3hfca"]
+[ext_resource type="Texture2D" uid="uid://b0rlj1vlbogsr" path="res://assets/menu_backgrounds/main-menu-options.png" id="4_rk5ns"]
+[ext_resource type="Texture2D" uid="uid://dot8xnhsm8txb" path="res://assets/menu_backgrounds/main-menu-quit.png" id="5_huc47"]
+[ext_resource type="Texture2D" uid="uid://4i8hvc7tys7h" path="res://assets/UI/Buttons/Game/button-solitair.png" id="6_smvpw"]
+[ext_resource type="Texture2D" uid="uid://cux4hrodlxjea" path="res://assets/UI/Buttons/Game/button-solitair-hover.png" id="7_conj1"]
+[ext_resource type="Texture2D" uid="uid://csgjq70kwjhqi" path="res://assets/UI/Buttons/Game/button-solitair-focused.png" id="8_45aox"]
+[ext_resource type="Texture2D" uid="uid://4lulgmiihhk7" path="res://assets/UI/Buttons/Options/button-options.png" id="9_a1xw5"]
+[ext_resource type="Texture2D" uid="uid://osd5l0uuwqm3" path="res://assets/UI/Buttons/Options/button-options-hover.png" id="10_swwhf"]
+[ext_resource type="Texture2D" uid="uid://c4r71af24gnce" path="res://assets/UI/Buttons/Options/button-options-focused.png" id="11_hh63j"]
+[ext_resource type="Texture2D" uid="uid://dp4xk2dpxjjhr" path="res://assets/UI/Buttons/Quit/button-quit.png" id="12_f4b5d"]
+[ext_resource type="Texture2D" uid="uid://c6kqo0ae2b8vt" path="res://assets/UI/Buttons/Quit/button-quit-hover.png" id="13_efhwm"]
+[ext_resource type="Texture2D" uid="uid://d3dy3ihovdcpm" path="res://assets/UI/Buttons/Quit/button-quit-focused.png" id="14_gth8q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmwuf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xevso")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3hfca")
+}],
+"loop": true,
+"name": &"game",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rk5ns")
+}],
+"loop": true,
+"name": &"options",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_huc47")
+}],
+"loop": true,
+"name": &"quit",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hpfk0")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+position = Vector2(192, 108)
+sprite_frames = SubResource("SpriteFrames_qmwuf")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 44.0
+offset_right = 285.0
+offset_bottom = 70.0
+text = "Pixel Art Game Template"
+
+[node name="GameButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 105.0
+offset_right = 212.0
+offset_bottom = 112.0
+texture_normal = ExtResource("6_smvpw")
+texture_hover = ExtResource("7_conj1")
+texture_focused = ExtResource("8_45aox")
+
+[node name="OptionsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 121.0
+offset_right = 212.0
+offset_bottom = 129.0
+texture_normal = ExtResource("9_a1xw5")
+texture_hover = ExtResource("10_swwhf")
+texture_focused = ExtResource("11_hh63j")
+
+[node name="QuitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 137.0
+offset_right = 212.0
+offset_bottom = 145.0
+texture_normal = ExtResource("12_f4b5d")
+texture_hover = ExtResource("13_efhwm")
+texture_focused = ExtResource("14_gth8q")
+
+[connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

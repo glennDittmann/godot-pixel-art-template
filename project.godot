@@ -14,6 +14,17 @@ config/name="Godot-pixel-art-template"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://auto_loads/globals.gd"
+Utils="*res://auto_loads/utils.gd"
+
+[display]
+
+window/size/viewport_width=384
+window/size/viewport_height=216
+window/stretch/mode="viewport"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
