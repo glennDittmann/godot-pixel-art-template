@@ -17,4 +17,8 @@ Scene and the last quits the applications. <br>
 The Placeholder Scene has a back button, that by default goes back to the Main Menu, however any 
 scene can be specified in the exported variable <br>
 <br>
-An Autoload for global variables (path to scenes, ...) and utility functions (changing scenes safely, ...)
+An Autoload for global variables (path to scenes, ...) and utility functions (changing scenes safely, ...) <br>
+A conductor scene for making rhithm games.
+
+### Examples
+In `examples` there are some pre-built example games to show some of the functionality in an in-game experience.
