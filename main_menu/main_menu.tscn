@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://dsb0tvg4t7ptt" path="res://assets/menu_backgrounds/main-menu-game.png" id="3_3hfca"]
 [ext_resource type="Texture2D" uid="uid://b0rlj1vlbogsr" path="res://assets/menu_backgrounds/main-menu-options.png" id="4_rk5ns"]
 [ext_resource type="Texture2D" uid="uid://dot8xnhsm8txb" path="res://assets/menu_backgrounds/main-menu-quit.png" id="5_huc47"]
-[ext_resource type="Texture2D" uid="uid://4i8hvc7tys7h" path="res://assets/UI/Buttons/Game/button-solitair.png" id="6_smvpw"]
-[ext_resource type="Texture2D" uid="uid://cux4hrodlxjea" path="res://assets/UI/Buttons/Game/button-solitair-hover.png" id="7_conj1"]
-[ext_resource type="Texture2D" uid="uid://csgjq70kwjhqi" path="res://assets/UI/Buttons/Game/button-solitair-focused.png" id="8_45aox"]
+[ext_resource type="Texture2D" uid="uid://bbkwno4cxgivk" path="res://assets/UI/Buttons/Game/button-game.png" id="6_nsh83"]
+[ext_resource type="Texture2D" uid="uid://cjle5c3aeewqb" path="res://assets/UI/Buttons/Game/butto-game-hovered.png" id="7_l8dof"]
+[ext_resource type="Texture2D" uid="uid://ig5xj47jc701" path="res://assets/UI/Buttons/Game/butto-game-focused.png" id="8_68mvy"]
 [ext_resource type="Texture2D" uid="uid://4lulgmiihhk7" path="res://assets/UI/Buttons/Options/button-options.png" id="9_a1xw5"]
 [ext_resource type="Texture2D" uid="uid://osd5l0uuwqm3" path="res://assets/UI/Buttons/Options/button-options-hover.png" id="10_swwhf"]
 [ext_resource type="Texture2D" uid="uid://c4r71af24gnce" path="res://assets/UI/Buttons/Options/button-options-focused.png" id="11_hh63j"]
@@ -77,9 +77,9 @@ offset_left = 159.0
 offset_top = 105.0
 offset_right = 212.0
 offset_bottom = 112.0
-texture_normal = ExtResource("6_smvpw")
-texture_hover = ExtResource("7_conj1")
-texture_focused = ExtResource("8_45aox")
+texture_normal = ExtResource("6_nsh83")
+texture_hover = ExtResource("7_l8dof")
+texture_focused = ExtResource("8_68mvy")
 
 [node name="OptionsButton" type="TextureButton" parent="."]
 layout_mode = 0
