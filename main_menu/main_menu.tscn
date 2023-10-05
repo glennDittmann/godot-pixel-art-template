@@ -65,11 +65,12 @@ sprite_frames = SubResource("SpriteFrames_qmwuf")
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 44.0
-offset_right = 285.0
-offset_bottom = 70.0
-text = "Pixel Art Game Template"
+offset_left = 120.0
+offset_top = 39.0
+offset_right = 248.0
+offset_bottom = 91.0
+text = "     Pixel Art 
+Game Template"
 
 [node name="GameButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -77,6 +78,8 @@ offset_left = 159.0
 offset_top = 105.0
 offset_right = 212.0
 offset_bottom = 112.0
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_nsh83")
 texture_hover = ExtResource("7_l8dof")
 texture_focused = ExtResource("8_68mvy")
@@ -87,6 +90,8 @@ offset_left = 159.0
 offset_top = 121.0
 offset_right = 212.0
 offset_bottom = 129.0
+focus_neighbor_top = NodePath("../GameButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
 texture_normal = ExtResource("9_a1xw5")
 texture_hover = ExtResource("10_swwhf")
 texture_focused = ExtResource("11_hh63j")
@@ -97,6 +102,8 @@ offset_left = 159.0
 offset_top = 137.0
 offset_right = 212.0
 offset_bottom = 145.0
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_neighbor_bottom = NodePath("../GameButton")
 texture_normal = ExtResource("12_f4b5d")
 texture_hover = ExtResource("13_efhwm")
 texture_focused = ExtResource("14_gth8q")
