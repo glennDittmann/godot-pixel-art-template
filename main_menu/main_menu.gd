@@ -2,8 +2,7 @@ extends Control
 
 
 func _ready():
-	#$GameButton.grab_focus()
-	pass
+	$GameButton.grab_focus()
 
 
 func _process(delta):
