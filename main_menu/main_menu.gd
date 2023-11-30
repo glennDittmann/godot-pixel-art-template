@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready():
-	$GameButton.grab_focus()
+	$VBoxContainer/GameButton.grab_focus()
 
 
 func _process(delta):
@@ -10,11 +10,11 @@ func _process(delta):
 
 
 func _update_background():
-	if $GameButton.is_hovered() or $GameButton.has_focus():
+	if $VBoxContainer/GameButton.is_hovered() or $VBoxContainer/GameButton.has_focus():
 		$Background.play("game")
-	elif $OptionsButton.is_hovered() or $OptionsButton.has_focus():
+	elif $VBoxContainer/OptionsButton.is_hovered() or $VBoxContainer/OptionsButton.has_focus():
 		$Background.play("options")
-	elif $QuitButton.is_hovered() or $QuitButton.has_focus():
+	elif $VBoxContainer/QuitButton.is_hovered() or $VBoxContainer/QuitButton.has_focus():
 		$Background.play("quit")
 	else:
 		$Background.play("default")

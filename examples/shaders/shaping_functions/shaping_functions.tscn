@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgob0tpdy5cau"]
+
+[ext_resource type="Shader" path="res://examples/shaders/shaping_functions/linear.gdshader" id="1_1vi25"]
+[ext_resource type="Texture2D" uid="uid://docv284y00orp" path="res://examples/shaders/shader-base-128.png" id="2_yiswo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wpnmo"]
+shader = ExtResource("1_1vi25")
+
+[node name="ShapingFunctions" type="Node2D"]
+
+[node name="Linear" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wpnmo")
+position = Vector2(64, 64)
+texture = ExtResource("2_yiswo")

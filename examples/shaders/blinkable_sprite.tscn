@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0h0o0dr05ivt"]
+
+[ext_resource type="Shader" path="res://examples/shaders/tree_shader.gdshader" id="1_hdwvn"]
+[ext_resource type="Texture2D" uid="uid://doih5nrd6v7y6" path="res://examples/shaders/tree.png" id="2_50bed"]
+[ext_resource type="Script" path="res://examples/shaders/blinkable_sprite.gd" id="3_u38jv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0jrf"]
+shader = ExtResource("1_hdwvn")
+shader_parameter/alpha = 1.0
+
+[sub_resource type="Theme" id="Theme_w4whw"]
+
+[sub_resource type="Animation" id="Animation_jvanh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_68y2s"]
+resource_name = "tree_shader"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpsyy"]
+_data = {
+"RESET": SubResource("Animation_jvanh"),
+"tree_shader": SubResource("Animation_68y2s")
+}
+
+[node name="tree" type="Sprite2D"]
+material = SubResource("ShaderMaterial_q0jrf")
+position = Vector2(243, 66)
+texture = ExtResource("2_50bed")
+offset = Vector2(-77, 48)
+script = ExtResource("3_u38jv")
+
+[node name="321" type="Button" parent="."]
+anchors_preset = -1
+anchor_bottom = -0.0260417
+offset_left = 39.0
+offset_top = 14.0
+offset_right = 101.0
+offset_bottom = 45.0
+theme = SubResource("Theme_w4whw")
+text = "HIT ME"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qpsyy")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+
+[connection signal="pressed" from="321" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

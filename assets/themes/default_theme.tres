@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cw650oaua0iwa"]
+
+[ext_resource type="FontFile" uid="uid://ccudu5d2geaar" path="res://assets/fonts/Essentle4.otf" id="1_7vu4g"]
+[ext_resource type="FontFile" uid="uid://da6xfqwus3idd" path="res://assets/fonts/Baskic8.otf" id="1_pg1n6"]
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_pg1n6")
+Label/fonts/font = ExtResource("1_7vu4g")

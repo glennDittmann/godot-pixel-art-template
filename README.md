@@ -20,10 +20,16 @@ This includes the following editor settings:
 
 ### Functionality Modules
 An `autoload` for global variables (path to scenes, ...) and `utility` functions (changing scenes safely, ...) <br>
-A `conductor` scene for making rhythm games.
 
 ### Examples
 In `examples` there are some pre-built example games to show some of the functionality in an in-game experience.
 
 ### In game jams
 Entry for the Game Off 2022: [Gnop](https://glennorous.itch.io/gnop).
+
+## Credits
+
+### Fonts
+This repository uses the free, basic pixel art fonts made available from Pixel Overload. Feel free to check out Pixel Overloads full package,
+that contains some really cool desings. <br>
+Also make sure, when importing new fonts to set `Antialiasing` to `None`.

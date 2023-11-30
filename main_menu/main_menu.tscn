@@ -1,19 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://ddn6fquwsqsvg"]
+[gd_scene load_steps=17 format=3 uid="uid://ddn6fquwsqsvg"]
 
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_hpfk0"]
-[ext_resource type="Texture2D" uid="uid://2pes6e0h8pwd" path="res://assets/menu_backgrounds/main-menu-default.png" id="2_xevso"]
-[ext_resource type="Texture2D" uid="uid://dsb0tvg4t7ptt" path="res://assets/menu_backgrounds/main-menu-game.png" id="3_3hfca"]
-[ext_resource type="Texture2D" uid="uid://b0rlj1vlbogsr" path="res://assets/menu_backgrounds/main-menu-options.png" id="4_rk5ns"]
-[ext_resource type="Texture2D" uid="uid://dot8xnhsm8txb" path="res://assets/menu_backgrounds/main-menu-quit.png" id="5_huc47"]
-[ext_resource type="Texture2D" uid="uid://bbkwno4cxgivk" path="res://assets/UI/Buttons/Game/button-game.png" id="6_nsh83"]
-[ext_resource type="Texture2D" uid="uid://cjle5c3aeewqb" path="res://assets/UI/Buttons/Game/butto-game-hovered.png" id="7_l8dof"]
-[ext_resource type="Texture2D" uid="uid://ig5xj47jc701" path="res://assets/UI/Buttons/Game/butto-game-focused.png" id="8_68mvy"]
-[ext_resource type="Texture2D" uid="uid://4lulgmiihhk7" path="res://assets/UI/Buttons/Options/button-options.png" id="9_a1xw5"]
-[ext_resource type="Texture2D" uid="uid://osd5l0uuwqm3" path="res://assets/UI/Buttons/Options/button-options-hover.png" id="10_swwhf"]
-[ext_resource type="Texture2D" uid="uid://c4r71af24gnce" path="res://assets/UI/Buttons/Options/button-options-focused.png" id="11_hh63j"]
-[ext_resource type="Texture2D" uid="uid://dp4xk2dpxjjhr" path="res://assets/UI/Buttons/Quit/button-quit.png" id="12_f4b5d"]
-[ext_resource type="Texture2D" uid="uid://c6kqo0ae2b8vt" path="res://assets/UI/Buttons/Quit/button-quit-hover.png" id="13_efhwm"]
-[ext_resource type="Texture2D" uid="uid://d3dy3ihovdcpm" path="res://assets/UI/Buttons/Quit/button-quit-focused.png" id="14_gth8q"]
+[ext_resource type="Texture2D" uid="uid://cofoc06mu457l" path="res://assets/menu_backgrounds/main-menu-default.png" id="2_xevso"]
+[ext_resource type="Texture2D" uid="uid://dh3qk52uhbxye" path="res://assets/menu_backgrounds/main-menu-game.png" id="3_3hfca"]
+[ext_resource type="Texture2D" uid="uid://bc5lo3ql4imqd" path="res://assets/menu_backgrounds/main-menu-options.png" id="4_rk5ns"]
+[ext_resource type="Texture2D" uid="uid://dajrybiq58bv" path="res://assets/menu_backgrounds/main-menu-quit.png" id="5_huc47"]
+[ext_resource type="Texture2D" uid="uid://b62b3ooo0oske" path="res://assets/UI/Buttons/Game/button-game.png" id="6_nsh83"]
+[ext_resource type="FontFile" uid="uid://ccudu5d2geaar" path="res://assets/fonts/Essentle4.otf" id="6_o07uv"]
+[ext_resource type="Texture2D" uid="uid://d1hb1uyu78mvj" path="res://assets/UI/Buttons/Game/butto-game-hovered.png" id="7_l8dof"]
+[ext_resource type="Texture2D" uid="uid://dt6w1wju2ljgh" path="res://assets/UI/Buttons/Game/butto-game-focused.png" id="8_68mvy"]
+[ext_resource type="Texture2D" uid="uid://bj3vdraxu1fh" path="res://assets/UI/Buttons/Options/button-options.png" id="9_a1xw5"]
+[ext_resource type="Texture2D" uid="uid://b6jvplc1jv2ju" path="res://assets/UI/Buttons/Options/button-options-hover.png" id="10_swwhf"]
+[ext_resource type="Texture2D" uid="uid://kq3xbixkfcxf" path="res://assets/UI/Buttons/Options/button-options-focused.png" id="11_hh63j"]
+[ext_resource type="Texture2D" uid="uid://dme6d1snhx3ad" path="res://assets/UI/Buttons/Quit/button-quit.png" id="12_f4b5d"]
+[ext_resource type="Texture2D" uid="uid://bagg26emalats" path="res://assets/UI/Buttons/Quit/button-quit-hover.png" id="13_efhwm"]
+[ext_resource type="Texture2D" uid="uid://p7h6su50sha8" path="res://assets/UI/Buttons/Quit/button-quit-focused.png" id="14_gth8q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmwuf"]
 animations = [{
@@ -63,51 +64,55 @@ script = ExtResource("1_hpfk0")
 position = Vector2(192, 108)
 sprite_frames = SubResource("SpriteFrames_qmwuf")
 
-[node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 39.0
-offset_right = 248.0
-offset_bottom = 91.0
-text = "     Pixel Art 
-Game Template"
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 35.0
+offset_right = 84.0
+offset_bottom = 73.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_o07uv")
+theme_override_font_sizes/font_size = 16
+text = "Pixel Art
+Template"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="GameButton" type="TextureButton" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 105.0
-offset_right = 212.0
-offset_bottom = 112.0
+offset_left = 163.0
+offset_top = 99.0
+offset_right = 216.0
+offset_bottom = 139.0
+alignment = 1
+
+[node name="GameButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
 focus_neighbor_top = NodePath("../QuitButton")
 focus_neighbor_bottom = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_nsh83")
 texture_hover = ExtResource("7_l8dof")
 texture_focused = ExtResource("8_68mvy")
 
-[node name="OptionsButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 121.0
-offset_right = 212.0
-offset_bottom = 129.0
+[node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
 focus_neighbor_top = NodePath("../GameButton")
 focus_neighbor_bottom = NodePath("../QuitButton")
 texture_normal = ExtResource("9_a1xw5")
 texture_hover = ExtResource("10_swwhf")
 texture_focused = ExtResource("11_hh63j")
 
-[node name="QuitButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 137.0
-offset_right = 212.0
-offset_bottom = 145.0
+[node name="QuitButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../GameButton")
 texture_normal = ExtResource("12_f4b5d")
 texture_hover = ExtResource("13_efhwm")
 texture_focused = ExtResource("14_gth8q")
 
-[connection signal="pressed" from="GameButton" to="." method="_on_game_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/GameButton" to="." method="_on_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
