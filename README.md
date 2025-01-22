@@ -21,9 +21,6 @@ This includes the following editor settings:
 ### Functionality Modules
 An `autoload` for global variables (path to scenes, ...) and `utility` functions (changing scenes safely, ...) <br>
 
-### Examples
-In `examples` there are some pre-built example games to show some of the functionality in an in-game experience.
-
 ### In game jams
 Entry for the Game Off 2022: [Gnop](https://glennorous.itch.io/gnop).
 
